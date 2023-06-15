@@ -14,8 +14,10 @@ public class Test2 {
             array[i] = console.nextInt();
         }
         System.out.println("Воть:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        int lastArray = array[array.length-1];
+        for (int i = 0; i < array.length-1; i++) {
+            System.out.print(array[i]+", ");
         }
+        System.out.println(lastArray);
     }
 }
