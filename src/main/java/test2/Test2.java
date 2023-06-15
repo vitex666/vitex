@@ -1,6 +1,8 @@
 package main.java.test2;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Test2 {
     public static void main(String[] args) {
@@ -9,15 +11,14 @@ public class Test2 {
         int n = console.nextInt();
 
         int [] array = new int[n];
-        System.out.print("заполните масив целых чисел: ");
+        System.out.println("заполните масив целых чисел: ");
         for (int i = 0; i < array.length; i++) {
             array[i] = console.nextInt();
         }
         System.out.print("Воть: ");
-        int lastArray = array[array.length-1];
-        for (int i = 0; i < array.length-1; i++) {
-            System.out.print(array[i]+", ");
-        }
-        System.out.println(lastArray);
+        String resultString = IntStream.of(array)
+                .mapToObj(i -> i + "")
+                .collect(Collectors.joining(","));
+        System.out.println(resultString);
     }
 }
