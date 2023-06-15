@@ -13,7 +13,7 @@ public class Test2 {
         for (int i = 0; i < array.length; i++) {
             array[i] = console.nextInt();
         }
-        System.out.println("Воть:");
+        System.out.print("Воть: ");
         int lastArray = array[array.length-1];
         for (int i = 0; i < array.length-1; i++) {
             System.out.print(array[i]+", ");
