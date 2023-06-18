@@ -1,10 +1,10 @@
-package main.java.lesson3;
+package main.java.lesson4;
 
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class LassonRanPlus {
+public class LessonRanPlusN {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.print("Введите размер массива - ");
@@ -17,6 +17,7 @@ public class LassonRanPlus {
         }
         System.out.print("Воть: ");
         String resultString = IntStream.of(array)
+                .filter(i -> i > 0)
                 .mapToObj(i -> i + "")
                 .collect(Collectors.joining(","));
         System.out.println(resultString);
