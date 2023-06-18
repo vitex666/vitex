@@ -13,7 +13,7 @@ public class LassonRan {
         int [] array = new int[n];
         System.out.println("заполните масив целых чисел: ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = ((int)(Math.random()*20) - 10);
+            array[i] = ((int)(Math.random()*10));
         }
         System.out.print("Воть: ");
         String resultString = IntStream.of(array)
