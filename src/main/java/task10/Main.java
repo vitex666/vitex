@@ -9,7 +9,6 @@ public class Main {
         System.out.println("Введите размер масива - ");
         int n = console.nextInt();
 
-
         int[] arr = createArray(n);
         System.out.println("Воть: " + arrayToString(arr));
 
@@ -25,6 +24,7 @@ public class Main {
     }
 
     public static String doo(String str) {
+        System.out.println("f");
         return str;
     }
 
