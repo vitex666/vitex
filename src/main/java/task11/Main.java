@@ -7,17 +7,21 @@ public class Main {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите размер масива - ");
         int n = console.nextInt();
+        int t = console.nextInt();
         int[] arr = createArray(n);
-        System.out.println("Результат: " + arrayToString(arr));
+        int[] arr1 = createArray(t);
+
+        System.out.println("Результат: ");
+        printArray(arr);
+        printArray(arr1);
     }
 
-    public static String arrayToString(int[] arr) {   //выводим весь масив в одну строку через запятую
+    public static void printArray(int[] arr) {   //выводим весь масив в одну строку через запятую
 
-        String a = "";
         for (int i = 0; i < arr.length - 1; i++) {
-            a = a + arr[i] + ", ";
+            System.out.print(arr[i] + ", ");
         }
-        return a + arr[arr.length - 1];
+        System.out.println(arr[arr.length - 1]);
     }
 
     public static int[] createArray(int n) {
